@@ -1,0 +1,96 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="This is a website that showcases a mesmerizing animation of a galaxy using only HTML, CSS, and JavaScript.">
+    <meta name="keywords" content="sufyaantalish, mohd-sufyaan-talish, sufyn, Galaxy Animation, Galaxy, Animation, Solar System, Solar System Animation">
+    <meta name="author" content="Sufyaan">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:url" content="https://sufyn.github.io/celestialvoyages/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sufyaan | Galaxy Animation"/> 
+    <link rel = "icon" href = "./img/logo1.png" type = "image/x-icon">
+
+<link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/solar_system.css">
+    <link rel="stylesheet" href="./src/styles/planet_data.css">
+    <!-- <link rel="stylesheet" href="./src/styles/planet_visualization.css"> -->
+    <link rel="stylesheet" href="./src/styles/footer.css">
+    <link rel="stylesheet" href="./src/styles/newplanet.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+      integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <title>Sufyaan | SolarSystem</title>
+
+</head>
+  
+  <body>
+    <header class="header">
+    <div class="nav wrapper">
+            <h1><a href="./" class="logo">Celestial Voyages</a></h1>
+            <ul class="social-links">
+                <a href="./index.html" target="_blank">
+                    Home
+                    </a>
+                </li>
+                <li>
+                    <a href="./galaxy.html" target="_blank">
+                    Galaxy
+                    </a>
+                </li>
+                <li>
+                    <a href="./Statistics.html" target="_blank">
+                    Statistics
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/sufyn" target="_blank">
+                    <i class="bi bi-github"></i>
+                    </a>
+                </li>
+                <li>
+                  
+            </ul>
+        </div>
+    </header>
+    <h1 class="title-name">Solar System</h1><br><br><br>
+    <img class="title-image" src="./src/assets/galaxy.jpg" alt="Galaxy">
+
+    <svg></svg>
+
+    <ul id="more-info">
+      <h1 class="more-info-instruction-1">Click on a Planet to reveal all its data</h1>
+      <h1 class="more-info-instruction-2">Click on a slice to compare all planets by that category</h1>
+      <h1 class="more-info-instruction-3">Hover over a slice or check the legend to view totals</h1>
+      <h1 style="color: antiquewhite; transform: translateY(550px);">*Use keys 1-8 on your numpad to also cycle categories*</h1>
+
+    </ul>
+
+    <div id="chart">
+      <div class="innerCont"></div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-notes">
+        <small>Semimajor Axis of the body in kilometers.</small>
+        <small>Perihelion in kilometers.</small>
+        <small>Aphelion in kilometers.</small>
+        <small>Orbital inclination in degrees.</small>
+        <small>Body density in g.cm3.</small>
+        <small>Surface gravity in m.s-2.</small>
+      </div>
+      
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/mohd-sufyaan-talish/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/sufyn" target="_blank"><i class="fab fa-github-square"></i></a>
+        <a href="mailto:sufyaan4guys@gmail.com" class="bryan-santos">by Sufyaan</a>
+      </div>
+    </footer>
+  </body>
+  
+  <script src="./src/javascripts/solar_system.js"></script>
+  <script src="./src/javascripts/planet_data.js"></script>
+  <script src="./src/javascripts/planet_visualization.js"></script>
+</html>
+ 

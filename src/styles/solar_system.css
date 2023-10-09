@@ -1,0 +1,67 @@
+.title-name {
+  margin-top: 66px;
+  color: white;
+  font-family: "Alien League Bold";
+  font-size: 65px;
+  letter-spacing: 20px;
+  width: auto;
+  position: absolute;
+  z-index: 2;
+  left: 300px;
+}
+
+.title-image {
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  left: 805px;
+  z-index: 1;
+}
+    
+svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* transform: translateX(-1px);
+  z-index: 100; */
+}
+
+.bounding-box {
+  fill-opacity: 0;
+}
+
+.label {
+  font-family: monospace;
+  opacity: 1;
+  font-size: 20px;
+  fill: #fff;
+  z-index: 1;
+}
+
+.info {
+  font-family: monospace;
+  opacity: 1;
+  font-size: 15px;
+  fill: #fff;
+}
+
+.planet circle, .graticule {
+  fill: none;
+  stroke: #123;
+  stroke-opacity: 0.15;
+}
+
+.planet circle {
+  stroke-width: 1px;
+  cursor: pointer;
+}
+
+.axis-line {
+  stroke: #fff;
+  stroke-opacity: 0.3;   
+}
+
+.star {
+  fill: white;
+  opacity: 1;
+}

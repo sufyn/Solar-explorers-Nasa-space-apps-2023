@@ -1,0 +1,51 @@
+.footer {
+  margin: 10px auto 66px auto;
+  font-size: 30px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 1150px;
+  border: 2px solid white;
+  padding: 30px 50px;
+  position: absolute;
+  left: 40px;
+}
+
+small {
+  padding: 2px 0;
+}
+
+.footer-notes {
+  display: flex;
+  font-family: monospace;
+  font-size: 20px;
+  padding: 4px 0;
+  flex-direction: column;
+}
+
+.icons {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.fa-linkedin {
+  font-size: 1.9em;
+  padding-right: 16px;
+  color: white;
+}
+
+.fa-github-square {
+  font-size: 1.9em;
+  padding-right: 16px;
+  color: white;
+}
+
+.bryan-santos {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: white;
+}

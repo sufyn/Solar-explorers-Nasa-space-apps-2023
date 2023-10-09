@@ -1,0 +1,205 @@
+.innerCont {
+    overflow: auto; 
+    top:290px; 
+    left: 0px; 
+    height:750px; 
+    Width:1200;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #chart {
+    height:1200px;
+    width:900px;
+  }
+  
+  #chart text {
+    fill: white;
+    font-family: monospace;
+    text-anchor: end;
+    font-size: 25px!important;
+    animation-name: fadeInOpacity;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 1s;
+  }
+
+  @keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+path {
+  stroke: white;
+  stroke-width: 2;
+  fill: none;
+}
+
+.legend-text {
+  font-size: 20px!important;
+  font-family: monospace!important;
+}
+
+#legend-header {
+  position: absolute;
+  color: white;
+  font-family: "Alien League Bold";
+  font-size: 48px;
+  /* left: 1580px; */
+  /* left: 1493px; */
+  left: 880px;
+  top: 269px;
+  /* border-bottom: 2px groove white; */
+  padding-bottom: 7px;
+  /* border-radius: 10%; */
+  width: 225px;
+  /* text-align: center; */
+  text-align: right;
+  animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+#sun {
+  animation: glowing 2000ms infinite;
+  stroke-width: 5px;
+}
+
+@keyframes glowing {
+  0% { stroke: #FB8933; box-shadow: 0 0 3px #FB8933; }
+  50% { stroke: #fdb341; box-shadow: 0 0 40px #fdb341; }
+  100% { stroke: #FB8933; box-shadow: 0 0 3px #FB8933; }
+}
+
+
+/* // header */
+
+
+:root {
+    --main-background: hsl(0, 0%, 0%);
+    --text-color: hsl(0, 0%, 100%);
+    --underline-color: hsl(259, 72%, 69%);
+    --card-background: hsl(211, 56%, 20%);
+    --hover-color: hsl(259, 64%, 44%);
+    --font-space-grotesk: "Space Grotesk", sans-serif;
+    --font-bold: 700;
+    --font-regular: 400;
+    --animate-delay: 0.5s;
+  }
+  
+  *,*::after,*::before {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0;
+    transform-style: preserve-3d;
+  }
+  ::selection {
+    background: rgb(207, 207, 207);
+    color: rgb(15, 15, 15);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--font-space-grotesk);
+    background-color: var(--main-background);
+    color: var(--text-color);
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  
+  .title {
+    margin-bottom: 77px;
+    text-align: center;
+  }
+  .title h2 {
+    font-size: clamp(1.75rem, 1.3546rem + 1.9231vw, 2.125rem);
+  }
+  .title p {
+    font-size: clamp(1rem, 0.8682rem + 0.641vw, 1.125rem);
+  }
+  
+  .animation_delay {
+    -webkit-animation-delay: var(--animate-delay);
+            animation-delay: var(--animate-delay);
+  }
+  
+  .wrapper {
+    max-width: 1199px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  /* convert px to rem */
+  /* header */
+  .header {
+    width: 100%;
+    min-height: 10vh;
+    height: auto;
+    padding-top: 33px;
+    /* navigation */
+    /* hero section */
+  }
+  .header .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+    /* responsive design */
+  }
+  @media screen and (min-width: 600px) {
+    .header .nav {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .header .nav .logo {
+    font-size: 1.625rem;
+    color: var(--text-color);
+    font-weight: var(--font-bold);
+    letter-spacing: 1.3px;
+  }
+  .header .nav .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 39px;
+  }
+  .header .nav .social-links li a i {
+    transition: all ease-in-out 0.3s;
+  }
+  .header .nav .social-links li a:hover i {
+    transition: all ease-in-out 0.3s;
+    fill: var(--underline-color);
+  }
+  .header .hero-section {
+    height: 80vh;
+    margin-top: 107px;
+    /* responsive design */
+  }
+  

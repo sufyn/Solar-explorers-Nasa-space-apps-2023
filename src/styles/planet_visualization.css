@@ -1,0 +1,87 @@
+.innerCont {
+  overflow: auto; 
+  top:490px; 
+  left: 600px; 
+  height:750px; 
+  Width:1200;
+  position: relative;
+  overflow: hidden;
+}
+
+#chart {
+  height:1200px;
+  width:900px;
+}
+
+#chart text {
+  fill: white;
+  font-family: monospace;
+  text-anchor: end;
+  font-size: 15px!important;
+  animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+path {
+  stroke: white;
+  stroke-width: 2;
+  fill: none;
+}
+
+.legend-text {
+  font-size: 20px!important;
+  font-family: monospace!important;
+}
+
+#legend-header {
+  position: absolute;
+  color: white;
+  font-family: "Alien League Bold";
+  font-size: 48px;
+  /* left: 1580px; */
+  /* left: 1493px; */
+  left: 1483px;
+  top: 539px;
+  /* border-bottom: 2px groove white; */
+  padding-bottom: 7px;
+  /* border-radius: 10%; */
+  width: 225px;
+  /* text-align: center; */
+  text-align: right;
+  animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+#sun {
+  animation: glowing 2000ms infinite;
+  stroke-width: 5px;
+}
+
+@keyframes glowing {
+  0% { stroke: #FB8933; box-shadow: 0 0 3px #FB8933; }
+  50% { stroke: #fdb341; box-shadow: 0 0 40px #fdb341; }
+  100% { stroke: #FB8933; box-shadow: 0 0 3px #FB8933; }
+}
