@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+
+<style>
+  section {
+    font-family: Arial, sans-serif;
+    margin: 100px;
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+textarea {
+    font-size: 20px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+}
+button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#resultImageContainer {
+    margin-top: 20px;
+}
+
+#resultImage {
+    max-width: 100%;
+    height: auto;
+}
+</style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav wrapper">
+            <a href="./" class="logo">Celestial Voyages</a>
+            <ul class="social-links">
+                <a href="./index.html" target="_blank">
+                    Home
+                    </a>
+                </li>
+                <li>
+                    <a href="./galaxy.html" target="_blank">
+                    Galaxy
+                    </a>
+                </li>
+                <li>
+                    <a href="./galaxy.html" target="_blank">
+                    Statistics
+                    </a>
+                </li>
+                <li>
+                    <a href="./chat.html" target="_blank">
+                    Spacebot
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/sufyn" target="_blank">
+                    <i class="bi bi-github"></i>
+                    </a>
+                </li>
+                <li>
+                  
+            </ul>
+            
+        
+        </div>
+<section>
+    <div>
+        <h1>Spacebot</h1><br>
+        <label for="userInput">Enter Text:</label>
+        <textarea id="userInput" rows="4" cols="50"></textarea>
+    </div>
+    <button onclick="processText()">Process Text</button>
+
+    <div id="result">
+        <!-- Display the result here -->
+    </div>
+</section>
+<script>
+function processText() {
+    // Get user input
+    const userInput = document.getElementById('userInput').value;
+
+    // Make API request (replace 'your-model-name' with the actual model name)
+    fetch('https://api-inference.huggingface.co/models/google/flan-t5-xxl', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ inputs: userInput }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+
+        // Display the result
+        document.getElementById('result').innerText = data[0]['generated_text'];
+
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+
+
+
+//         async function query(data) {
+// 	const response = await fetch(
+// 		"https://api-inference.huggingface.co/models/google/flan-t5-xxl",
+// 		{
+// 			headers: { Authorization: "Bearer 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" },
+// 			method: "POST",
+// 			body: JSON.stringify(data),
+// 		}
+// 	);
+// 	const result = await response.json();
+// 	return result;
+// }
+
+// query({"inputs": "The answer to the universe is"}).then((response) => {
+// 	console.log(JSON.stringify(response));
+// });
+
+
+</script>
+</body>
+</html>
